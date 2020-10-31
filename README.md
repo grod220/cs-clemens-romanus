@@ -1,30 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Calvary Stockholm ✝
+##### Version 3: [Clement of Rome](https://en.wikipedia.org/wiki/Pope_Clement_I)
 
-## Getting Started
+The app repo for calvarystockholm.se. If you're in the Stockholm area, give us a visit!
 
-First, run the development server:
+## Technologies used
 
-```bash
-npm run dev
-# or
+- Front-end
+	- Nextjs 10 (React v17)
+	- Styled-components 
+  
+- Back-end
+  - Google sheets w/ webhooks
+
+### How to dev locally
+```
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deployment steps
+Netlify is automatically tied to the master branch of this repo. As it gets updated, Netlify rebuilds and deploys.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Site planning doc
+[This doc](https://docs.google.com/document/d/1--GkULGkSRva8OvXBaKrW-euBJmzPJ68EVN2N5eIIUs/edit) serves as primary source for planning and development of the site.
 
-## Learn More
+### Events
 
-To learn more about Next.js, take a look at the following resources:
+TBD where these will live. Perhaps google sheets.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Future plans & nice-to-haves
+- Stock imagery replaced with home-grown photos
+- Working CMS w/ netlify CMS
+- Integration w/ Spotify playlists for latest worship songs (?)
+- Integration w/ Facebook and social media strategy
+- Sermon messages section
+- Google Adwords grant ads strategy
