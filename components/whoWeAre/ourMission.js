@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FeaturedWithBackground from '../shared/featureWithBackground';
+import FeaturedWithBackground from '../shared/feature-with-background';
 import Mountains from '../../images/who-we-are-mountains.jpg';
 
 const OurMission = () => (

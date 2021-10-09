@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PewsImg from '../../images/sundays-pews.jpg';
-import FeatureWithBackground from '../shared/featureWithBackground';
+import FeatureWithBackground from '../shared/feature-with-background';
 
 const HebrewsBlock = () => (
   <FeatureWithBackground image={PewsImg}>

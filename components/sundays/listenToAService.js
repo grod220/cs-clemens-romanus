@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import BibleImg from '../../images/sundays-bible-open.jpg';
-import FeatureWithBackground from '../shared/featureWithBackground';
+import FeatureWithBackground from '../shared/feature-with-background';
 import John6Audio from '../../images/john-6-message.mp3';
 
 const WhiteAnchor = styled.a`

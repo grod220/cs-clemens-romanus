@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import HeroImg from '../../images/homepage-hero-night.jpg';
 import Image from 'next/image';
+import { SendToBack } from '../shared/send-to-back';
 
 const Container = styled.div`
   min-height: 33.75rem;
-  //overflow: hidden;
   position: relative;
   width: 100vw;
   max-width: 100%;
@@ -60,13 +60,6 @@ const Statement = styled.div`
     font-size: calc(2.89rem + 35 * ((100vw - 36rem) / 1000));
     line-height: calc(1em + 0.5vw);
   }
-`;
-
-const SendToBack = styled.div`
-  z-index: 0;
-  position: relative;
-  width: 100%;
-  height: 100%;
 `;
 
 export const HomeHeader: FC = () => (

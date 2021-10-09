@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const OuterContainer = styled.div`
@@ -29,7 +29,7 @@ const Title = styled.h1`
   color: #848484;
 `;
 
-const WhiteContentBlock = ({ children, title }) => (
+export const WhiteContentBlock: FC<{ title: string }> = ({ children, title }) => (
   <OuterContainer>
     <InnerContainer>
       {title ? <Title>{title}</Title> : ''}
@@ -37,5 +37,3 @@ const WhiteContentBlock = ({ children, title }) => (
     </InnerContainer>
   </OuterContainer>
 );
-
-export default WhiteContentBlock;

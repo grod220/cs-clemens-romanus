@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import BiblePic from '../../images/who-we-are-bible.jpg';
-import FeatureBlock from '../shared/featureWithBackground';
+import FeatureBlock from '../shared/feature-with-background';
 
 const WhiteAnchor = styled.a`
   color: white;

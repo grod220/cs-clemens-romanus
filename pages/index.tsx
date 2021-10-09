@@ -3,6 +3,12 @@ import Head from 'next/head';
 import { HomeHeader } from '../components/homepage/home-header';
 import { Layout } from '../components/shared/layout';
 import { HomePopup } from '../components/homepage/home-popup';
+import { ServiceTimes } from '../components/homepage/service-times';
+import SummaryBlock from '../components/homepage/summary-block';
+import { CoreValues } from '../components/shared/core-values';
+import { WhiteContentBlock } from '../components/shared/white-content-block';
+import { PreFooterImg } from '../components/homepage/pre-footer-img';
+import { StayInTouch } from '../components/shared/stay-in-touch';
 
 const Home: NextPage = () => {
   return (
@@ -18,16 +24,16 @@ const Home: NextPage = () => {
       <Layout>
         <HomePopup activeUntil={new Date(2021, 1, 30)} />
         <HomeHeader />
-        {/*<ServiceTimes />*/}
-        {/*<SummaryBlock />*/}
+        <ServiceTimes />
+        <SummaryBlock />
         {/*{this.state.upcomingEvents && Boolean(this.state.upcomingEvents.length) && (*/}
         {/*  <CalendarWidget events={this.state.upcomingEvents} />*/}
         {/*)}*/}
-        {/*<CoreValues />*/}
-        {/*<WhiteContentBlock title="Stay in touch">*/}
-        {/*  <StayInTouch />*/}
-        {/*</WhiteContentBlock>*/}
-        {/*<PreFooterImg />*/}
+        <CoreValues />
+        <WhiteContentBlock title="Stay in touch">
+          <StayInTouch />
+        </WhiteContentBlock>
+        <PreFooterImg />
       </Layout>
     </>
   );

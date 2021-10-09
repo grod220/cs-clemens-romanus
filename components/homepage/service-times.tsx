@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-
-import WhiteContentBlock from '../shared/whiteContentBlock';
+import { WhiteContentBlock } from '../shared/white-content-block';
 
 const Container = styled.div`
   text-align: center;
@@ -21,8 +20,8 @@ const MapsLink = styled.span`
   }
 `;
 
-const ServiceTimes = () => (
-  <WhiteContentBlock title={'Service Times'}>
+export const ServiceTimes: FC = () => (
+  <WhiteContentBlock title="Service Times">
     <Container>
       <ServiceTime>
         Sundays @ 10am{' '}
@@ -42,5 +41,3 @@ const ServiceTimes = () => (
     </Container>
   </WhiteContentBlock>
 );
-
-export default ServiceTimes;

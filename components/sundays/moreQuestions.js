@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import CityScape from '../../images/sundays-city-scape.jpg';
-import FeatureWithBackground from '../shared/featureWithBackground';
+import FeatureWithBackground from '../shared/feature-with-background';
 
 const CustomStyle = styled.div`
   font-family: Open Sans, Arial, Helvetica, sans-serif;

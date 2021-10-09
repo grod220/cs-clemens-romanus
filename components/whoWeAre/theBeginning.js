@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import WhiteContentBlock from '../shared/whiteContentBlock';
+import WhiteContentBlock from '../shared/white-content-block';
 
 const AlignCenter = styled.div`
   text-align: center;

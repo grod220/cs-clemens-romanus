@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CongregationImg from '../../images/homepage-congregation.jpg';
-import FeatureWithBackground from '../shared/featureWithBackground';
+import { FeatureWithBackground } from '../shared/feature-with-background';
 
 const CustomStyle = styled.div`
   font-family: Open Sans, Arial, Helvetica, sans-serif;
