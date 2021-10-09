@@ -1,4 +1,5 @@
 ## Calvary Stockholm ✝
+
 ##### Version 3: [Clemens Romanus](https://de.wikipedia.org/wiki/Clemens_von_Rom)
 
 The app repo for calvarystockholm.se. If you're in the Stockholm area, give us a visit!
@@ -6,25 +7,31 @@ The app repo for calvarystockholm.se. If you're in the Stockholm area, give us a
 ## Technologies used
 
 - Front-end
-    - Nextjs
-    - Styled-components
+
+  - Nextjs
+  - Styled-components
 
 - Back-end (via Firebase cloud functions)
-    - Netlify serverless functions (async/await)
-    - Google sheets w/ webhooks
+  - Netlify serverless functions (async/await)
+  - Google sheets w/ webhooks
 
 ### Deployment steps
+
 Netlify is automatically tied to the master branch of this repo. As it gets updated, Netlify rebuilds and deploys.
 
 ### Site planning doc
+
 [This doc](https://docs.google.com/document/d/1gQyRYfCBTusJfmlWT-3D-pD4VEM1tNwSMsQTlt6EPz4/edit?usp=sharing) serves as primary source for planning and development of the site.
 
 ### Events & collected emails
+
 In [this sheet](https://docs.google.com/spreadsheets/d/1PyITnQGRqwbYcsXIZNC2sANFlmKrY3SIgV7wKGW3X88/edit#gid=1053217261), you'll be able to
+
 - edit events (note: there musn't be any spaces between rows) and publish live (takes a few mins to deploy).
 - see the collected email addresses from the forms on the site. As a user submits, it automatically gets inserted into the sheet.
 
 ### Future plans & nice-to-haves
+
 - Stock imagery replaced with home-grown photos
 - Working CMS w/ netlify CMS
 - Gatsby v2 upgrade
