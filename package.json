@@ -2,6 +2,7 @@
   "name": "cs-clemens-romanus",
   "version": "3.0.0",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,6 +15,7 @@
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-modal": "^3.14.3",
     "styled-components": "^5.3.1",
     "typeface-crimson-text": "^1.1.13",
     "typeface-open-sans": "^1.1.13",
@@ -21,9 +23,10 @@
   },
   "devDependencies": {
     "@types/react": "17.0.27",
+    "@types/react-modal": "^3.12.1",
     "@types/styled-components": "^5.1.15",
     "babel-plugin-styled-components": "^1.13.2",
-    "eslint": "7.32.0",
+    "eslint": "8.0.0",
     "eslint-config-next": "11.1.2",
     "prettier": "^2.4.1",
     "typescript": "4.4.3"

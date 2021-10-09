@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { HomeHeader } from '../components/homepage/home-header';
 import { Layout } from '../components/shared/layout';
+import { HomePopup } from '../components/homepage/home-popup';
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        {/*<HomePopup />*/}
+        <HomePopup activeUntil={new Date(2021, 1, 30)} />
         <HomeHeader />
         {/*<ServiceTimes />*/}
         {/*<SummaryBlock />*/}
