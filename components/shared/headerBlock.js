@@ -1,0 +1,46 @@
+import React from 'react';
+import styled from 'styled-components';
+import { Parallax } from 'react-scroll-parallax';
+import { isMobile } from 'react-device-detect';
+
+const Container = styled.div`
+  height: 26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #4a4a4a;
+`;
+
+const BackgroundImg = styled.div`
+  background: url('${(props) => props.image}');
+  width: 100vw;
+  max-width: 100%;
+  height: 39rem;
+  background-size: cover;
+  background-position: center;
+`;
+
+const Title = styled.h1`
+  color: white;
+  position: absolute;
+  z-index: 98;
+  text-align: center;
+  font-weight: 400;
+  font-family: Crimson Text, georgia, serif;
+  font-style: italic;
+  letter-spacing: 5px;
+  font-size: 45px;
+  margin: 17px 10px 0;
+`;
+
+const HeaderBlock = ({ img, titleText }) => (
+  <Container>
+    <Title>{titleText}</Title>
+    <Parallax y={[-40, 10]} disabled={isMobile}>
+      <BackgroundImg image={img} />
+    </Parallax>
+  </Container>
+);
+
+export default HeaderBlock;
