@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import './stayInTouch.css';
+import '../../styles/stayInTouch.css';
 
 const Container = styled.div`
   text-align: center;

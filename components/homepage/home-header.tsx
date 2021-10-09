@@ -1,16 +1,16 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import HeroImg from '../../images/homepage-hero-night.jpg';
+import Image from 'next/image';
 
 const Container = styled.div`
   min-height: 33.75rem;
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  background-size: cover;
-  background: #24242c url('${HeroImg.src}') center;
+  background: #24242c;
 `;
 
 const MissionBlock = styled.div`
@@ -21,6 +21,7 @@ const MissionBlock = styled.div`
   margin: 0 auto;
   left: 0;
   right: 0;
+  z-index: 1;
 
   @media (max-width: 83rem) {
     width: 95vw;
@@ -61,6 +62,13 @@ const Statement = styled.div`
   }
 `;
 
+const SendToBack = styled.div`
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
 export const HomeHeader: FC = () => (
   <Container>
     <MissionBlock>
@@ -71,5 +79,8 @@ export const HomeHeader: FC = () => (
         loving others
       </Statement>
     </MissionBlock>
+    <SendToBack>
+      <Image alt="Calvary Stockholm location" src={HeroImg} layout="fill" objectFit="cover" placeholder="blur" />
+    </SendToBack>
   </Container>
 );
