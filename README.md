@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Calvary Stockholm ✝
+##### Version 3: [Clemens Romanus](https://de.wikipedia.org/wiki/Clemens_von_Rom)
 
-## Getting Started
+The app repo for calvarystockholm.se. If you're in the Stockholm area, give us a visit!
 
-First, run the development server:
+## Technologies used
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Front-end
+    - Nextjs
+    - Styled-components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Back-end (via Firebase cloud functions)
+    - Netlify serverless functions (async/await)
+    - Google sheets w/ webhooks
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Deployment steps
+Netlify is automatically tied to the master branch of this repo. As it gets updated, Netlify rebuilds and deploys.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Site planning doc
+[This doc](https://docs.google.com/document/d/1gQyRYfCBTusJfmlWT-3D-pD4VEM1tNwSMsQTlt6EPz4/edit?usp=sharing) serves as primary source for planning and development of the site.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Events & collected emails
+In [this sheet](https://docs.google.com/spreadsheets/d/1PyITnQGRqwbYcsXIZNC2sANFlmKrY3SIgV7wKGW3X88/edit#gid=1053217261), you'll be able to
+- edit events (note: there musn't be any spaces between rows) and publish live (takes a few mins to deploy).
+- see the collected email addresses from the forms on the site. As a user submits, it automatically gets inserted into the sheet.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Future plans & nice-to-haves
+- Stock imagery replaced with home-grown photos
+- Working CMS w/ netlify CMS
+- Gatsby v2 upgrade
+- gatsby-image implementation after object.fit polyfill see [this issue] (https://github.com/gatsbyjs/gatsby/issues/2470) and [this issue] (https://github.com/gatsbyjs/gatsby/issues/4021)
+- Integration w/ Spotify playlists for latest worship songs (?)
+- Integration w/ Facebook and social media strategy
+- Sermon messages section
+- Google Adwords grant ads strategy
