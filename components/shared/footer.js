@@ -46,8 +46,8 @@ const Footer = () => (
       <p>Circa 2007</p>
       <p>
         <i>
-          "...turn your ear to wisdom and apply your heart to understanding... then you will understand the fear of the
-          Lord and find the knowledge of God." - Proverbs 2
+          &quot;...turn your ear to wisdom and apply your heart to understanding... then you will understand the fear of
+          the Lord and find the knowledge of God.&quot; - Proverbs 2
         </i>
       </p>
     </ContentWrapper>

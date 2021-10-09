@@ -1,7 +1,7 @@
 {
   "name": "cs-clemens-romanus",
   "version": "3.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

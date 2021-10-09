@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Hamburger from './hamburger';
 import ColorGenerator from '../shared/eventsUtil';
+import Link from 'next/link';
 
 const Container = styled.div`
   position: absolute;
@@ -48,7 +49,7 @@ const BrandName = styled.h1`
   }
 `;
 
-const Nav = styled.ul`
+const Nav = styled.ul<{ mobileMenuActive: boolean }>`
   list-style-type: none;
   text-transform: uppercase;
   font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
@@ -67,46 +68,45 @@ const Nav = styled.ul`
   @media (max-width: 46.5625rem) {
     width: 12.5rem;
     text-align: center;
-    margin-top: ${(props) => (props.mobileMenuActive ? '4vh' : '-300vh')};
-    margin-left: ${(props) => (props.mobileMenuActive ? '' : '-300vw')};
+    margin-top: ${({ mobileMenuActive }) => (mobileMenuActive ? '4vh' : '-300vh')};
+    margin-left: ${({ mobileMenuActive }) => (mobileMenuActive ? '' : '-300vw')};
     font-size: 1.875rem;
     line-height: 10vh;
   }
 `;
 
-const Item = styled.li`
+const Item = styled.li<{ mobileMenuActive: boolean; delay: number }>`
   display: inline-block;
   margin-left: 3rem;
 
   @media (max-width: 46.5625rem) {
     display: block;
     margin-left: 0;
-    margin-top: ${(props) => (props.mobileMenuActive ? 0 : '-1.25rem')};
-    opacity: ${(props) => (props.mobileMenuActive ? 1 : 0)};
-    transition: ${(props) => (props.mobileMenuActive ? 'opacity 2s ease, margin .5s ease' : '')};
-    transition-delay: ${(props) => (props.mobileMenuActive ? props.delay + 'ms' : '')};
+    margin-top: ${({ mobileMenuActive }) => (mobileMenuActive ? 0 : '-1.25rem')};
+    opacity: ${({ mobileMenuActive }) => (mobileMenuActive ? 1 : 0)};
+    transition: ${({ mobileMenuActive }) => (mobileMenuActive ? 'opacity 2s ease, margin .5s ease' : '')};
+    transition-delay: ${({ mobileMenuActive, delay }) => (mobileMenuActive ? delay + 'ms' : '')};
   }
 `;
 
-const MobileMenu = styled.div`
+const MobileMenu = styled.div<{ mobileMenuActive: boolean }>`
   width: 100%;
   height: 100%;
   background-color: #212121;
   position: absolute;
-  z-index: ${(props) => (props.mobileMenuActive ? 99 : -99)};
-  opacity: ${(props) => (props.mobileMenuActive ? 0.98 : 0)};
+  z-index: ${({ mobileMenuActive }) => (mobileMenuActive ? 99 : -99)};
+  opacity: ${({ mobileMenuActive }) => (mobileMenuActive ? 0.98 : 0)};
 `;
 
-const areUpcomingEvents = (allEvents) => {
-  const eventsToCome = ColorGenerator.removeOldEvents(allEvents);
-  return Boolean(eventsToCome.length);
-};
+// const areUpcomingEvents = (allEvents) => {
+//   const eventsToCome = ColorGenerator.removeOldEvents(allEvents);
+//   return Boolean(eventsToCome.length);
+// };
 
 const menuList = ['Sundays', 'Who we are', 'Calendar', 'Get in touch', 'Facebook'];
 
 export default function Navigation() {
   const [mobileMenu, setMobileMenu] = useState(false);
-
   const toggleMobileMenu = () => setMobileMenu(!mobileMenu);
   const hideMobileMenu = () => setMobileMenu(false);
 
@@ -124,31 +124,32 @@ export default function Navigation() {
 
   return (
     <>
-      NAVIGATION
-      {/*<Container>*/}
-      {/*  <BrandName>*/}
-      {/*    <Hamburger mobileMenuActive={mobileMenu} triggerFunc={toggleMobileMenu} />*/}
-      {/*    <Link to="/" onClick={hideMobileMenu}>*/}
-      {/*      Calvary Stockholm*/}
-      {/*    </Link>*/}
-      {/*  </BrandName>*/}
-      {/*  <Nav mobileMenuActive={mobileMenu}>*/}
-      {/*    {menuList*/}
-      {/*      .filter((item) => item !== 'Calendar' || areUpcomingEvents(allEvents))*/}
-      {/*      .map((itemTitle, index) => (*/}
-      {/*        <Item mobileMenuActive={mobileMenu} delay={index * 125} key={index} onClick={hideMobileMenu}>*/}
-      {/*          {itemTitle === 'Facebook' ? (*/}
-      {/*            <a href="https://www.facebook.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">*/}
-      {/*              {itemTitle}*/}
-      {/*            </a>*/}
-      {/*          ) : (*/}
-      {/*            <Link to={'/' + itemTitle.toLocaleLowerCase().replace(/ /g, '')}>{itemTitle}</Link>*/}
-      {/*          )}*/}
-      {/*        </Item>*/}
-      {/*      ))}*/}
-      {/*  </Nav>*/}
-      {/*</Container>*/}
-      {/*<MobileMenu mobileMenuActive={mobileMenu} />*/}
+      <Container>
+        <BrandName>
+          <Hamburger mobileMenuActive={mobileMenu} triggerFunc={toggleMobileMenu} />
+          <Link href="/">
+            <a onClick={hideMobileMenu}>Calvary Stockholm</a>
+          </Link>
+        </BrandName>
+        <Nav mobileMenuActive={mobileMenu}>
+          {menuList
+            // .filter((item) => item !== 'Calendar' || areUpcomingEvents(allEvents))
+            .map((itemTitle, index) => (
+              <Item mobileMenuActive={mobileMenu} delay={index * 125} key={index} onClick={hideMobileMenu}>
+                {itemTitle === 'Facebook' ? (
+                  <a href="https://www.facebook.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
+                    {itemTitle}
+                  </a>
+                ) : (
+                  <Link href={'/' + itemTitle.toLocaleLowerCase().replace(/ /g, '')}>
+                    <a>{itemTitle}</a>
+                  </Link>
+                )}
+              </Item>
+            ))}
+        </Nav>
+      </Container>
+      <MobileMenu mobileMenuActive={mobileMenu} />
     </>
   );
 }

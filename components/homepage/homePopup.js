@@ -80,7 +80,7 @@ class HomePopup extends React.Component {
               <p>
                 Until further notice: Calvary Stockholm will not meet in-person for Sunday worship, but virtually.
                 Please reach out to us at <a href="mailto:calvarystockholm@gmail.com">calvarystockholm@gmail.com</a> if
-                you'd like to join, or seek assistance/prayer.
+                you&apos;d like to join, or seek assistance/prayer.
               </p>
               <p>We are praying that God’s grace will abound in the midst of this present sickness and suffering.</p>
             </AlertBody>

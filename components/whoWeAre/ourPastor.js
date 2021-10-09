@@ -24,14 +24,14 @@ const OurPastor = () => (
     <div>
       <Title>Our Pastor</Title>
       <p>
-        A love for God, His Word, and helping others grow in their relationship with God are central to Joe's ministry.
-        Joe and his wife, Ursula, moved their family of four children to Stockholm in 2005 to focus on strengthening the
-        local church, discipleship, and church planting.
+        A love for God, His Word, and helping others grow in their relationship with God are central to Joe&apos;s
+        ministry. Joe and his wife, Ursula, moved their family of four children to Stockholm in 2005 to focus on
+        strengthening the local church, discipleship, and church planting.
       </p>
       <p>
         Joe became pastor at Calvary in June 2017. Other areas of interest for Joe are coffee, carpentry, anything
         outdoors, and biblical counseling. But most of all, Joe is a sinner, saved by the grace of God; ever needful of
-        God's grace and seeking to grow in His likeness.
+        God&apos;s grace and seeking to grow in His likeness.
       </p>
     </div>
   </TwoHalfWhiteBlock>

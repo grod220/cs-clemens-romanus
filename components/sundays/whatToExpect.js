@@ -20,9 +20,9 @@ const WhatToExpect = () => (
       </p>
       <h3>We Learn</h3>
       <p>
-        After singing, we take time to focus on God's Word. We believe the Word of God is essential to our lives---to
-        remind us, to encourage us, to instruct us, and guide us. As we apply God's Word to our lives, we are
-        transformed, and drawn closer to Him. We glorify God through proclaiming His truth.
+        After singing, we take time to focus on God&apos;s Word. We believe the Word of God is essential to our
+        lives---to remind us, to encourage us, to instruct us, and guide us. As we apply God&apos;s Word to our lives,
+        we are transformed, and drawn closer to Him. We glorify God through proclaiming His truth.
       </p>
       <h3>We Pray</h3>
       <p>
