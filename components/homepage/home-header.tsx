@@ -10,7 +10,7 @@ const Container = styled.div`
   max-width: 100%;
   height: 100vh;
   background-size: cover;
-  background: #24242c url('${HeroImg}') center;
+  background: #24242c url('${HeroImg.src}') center;
 `;
 
 const MissionBlock = styled.div`
