@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -18,12 +18,16 @@ const SmallText = styled.p`
   font-size: 22px;
 `;
 
-const NumberBlock = ({ num, bigText, smallText }) => (
+interface NumberBlockProps {
+  num: number;
+  bigText: string;
+  smallText: string;
+}
+
+export const NumberBlock: FC<NumberBlockProps> = ({ num, bigText, smallText }) => (
   <Container>
     <BigNum>{num}</BigNum>
     <BigText>{bigText}</BigText>
     <SmallText>{smallText}</SmallText>
   </Container>
 );
-
-export default NumberBlock;

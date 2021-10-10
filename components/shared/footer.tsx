@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -39,7 +39,7 @@ const BrandName = styled.h2`
   letter-spacing: 0.4rem;
 `;
 
-const Footer = () => (
+export const Footer: FC = () => (
   <Container>
     <ContentWrapper>
       <BrandName>Calvary Stockholm</BrandName>
@@ -53,5 +53,3 @@ const Footer = () => (
     </ContentWrapper>
   </Container>
 );
-
-export default Footer;

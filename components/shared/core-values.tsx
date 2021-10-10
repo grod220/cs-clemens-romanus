@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SkyBackground from '../../images/homepage-sky.jpg';
 import { FeatureWithBackground } from './feature-with-background';
-import NumberBlock from './numberBlock';
+import { NumberBlock } from './number-block';
 
 const BlockWrapper = styled.div`
   display: flex;

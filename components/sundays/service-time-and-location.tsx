@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import TwoHalfWhiteBlock from '../shared/twoHalfWhiteBlock';
+import { TwoHalfWhiteBlock } from '../shared/two-half-white-block';
 
 const Title = styled.h1`
   font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;

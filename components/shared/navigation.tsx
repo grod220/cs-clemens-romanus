@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Hamburger from './hamburger';
+import { Hamburger } from './hamburger';
 import ColorGenerator from '../shared/eventsUtil';
 import Link from 'next/link';
 

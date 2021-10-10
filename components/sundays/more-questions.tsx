@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import CityScape from '../../images/sundays-city-scape.jpg';
 import { FeatureWithBackground } from '../shared/feature-with-background';
 import Link from 'next/link';
+import { WhiteAnchor } from '../shared/white-anchor';
 
 const CustomStyle = styled.div`
   font-family: Open Sans, Arial, Helvetica, sans-serif;
@@ -24,13 +25,6 @@ const ItalicCursive = styled.i`
   letter-spacing: 1px;
 `;
 
-const WhiteAnchor = styled.a`
-  color: white;
-  text-decoration: underline;
-  &:hover {
-    cursor: pointer;
-  }
-`;
 export const MoreQuestions: FC = () => (
   <FeatureWithBackground image={CityScape}>
     <CustomStyle>

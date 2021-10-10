@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FeaturedBlock from '../shared/featureWithBackground';
 import EscalatorPic from '../../images/giving-escalator.jpg';
+import { FeatureWithBackground } from '../shared/feature-with-background';
 
 const TextStyling = styled.div`
   font-style: normal;
@@ -11,14 +11,14 @@ const TextStyling = styled.div`
 `;
 
 const SupportedMinistries = () => (
-  <FeaturedBlock title="Ministries we support" image={EscalatorPic} customHeight="400px">
+  <FeatureWithBackground title="Ministries we support" image={EscalatorPic} customHeight="400px">
     <TextStyling>
       <p>Local ministry</p>
       <p>Mission Org inc.</p>
       <p>Homes for the Volks</p>
       <p>????</p>
     </TextStyling>
-  </FeaturedBlock>
+  </FeatureWithBackground>
 );
 
 export default SupportedMinistries;

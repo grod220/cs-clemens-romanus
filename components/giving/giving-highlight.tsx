@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SubheadHighlight from '../shared/subheadHighlight';
+import { SubheadHighlight } from '../shared/subhead-highlight';
 
 const Text = styled.p`
   margin-bottom: 0;

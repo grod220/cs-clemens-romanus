@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TwoHalfWhiteBlock from '../shared/twoHalfWhiteBlock';
+import { TwoHalfWhiteBlock } from '../shared/two-half-white-block';
 import PastorJoe from '../../images/get-in-touch-joe.jpg';
+import Image from 'next/image';
 
 const Title = styled.h1`
   font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
@@ -14,13 +15,9 @@ const Title = styled.h1`
   color: #848484;
 `;
 
-const FamilyImg = styled.img`
-  max-height: 500px;
-`;
-
 const QuickHello = () => (
   <TwoHalfWhiteBlock>
-    <FamilyImg src={PastorJoe} />
+    <Image alt="Pastor Joe" src={PastorJoe} layout="intrinsic" placeholder="blur" className="limit-height" />
     <div>
       <Title>A quick hello from Joe</Title>
       <p>
