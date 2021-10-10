@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Hamburger } from './hamburger';
-import ColorGenerator from '../shared/eventsUtil';
 import Link from 'next/link';
+import { useQuery } from 'react-query';
+import { CalEventsFetcher } from '../../utils/calendar-fetcher';
 
 const Container = styled.div`
   position: absolute;
@@ -98,29 +99,13 @@ const MobileMenu = styled.div<{ mobileMenuActive: boolean }>`
   opacity: ${({ mobileMenuActive }) => (mobileMenuActive ? 0.98 : 0)};
 `;
 
-// const areUpcomingEvents = (allEvents) => {
-//   const eventsToCome = ColorGenerator.removeOldEvents(allEvents);
-//   return Boolean(eventsToCome.length);
-// };
-
 const menuList = ['Sundays', 'Who we are', 'Calendar', 'Get in touch', 'Facebook'];
 
 export default function Navigation() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMobileMenu = () => setMobileMenu(!mobileMenu);
   const hideMobileMenu = () => setMobileMenu(false);
-
-  // const allEvents = useStaticQuery(graphql`
-  //   query {
-  //     allGoogleSheetCalendarRow {
-  //       edges {
-  //         node {
-  //           date
-  //         }
-  //       }
-  //     }
-  //   }
-  // `).allGoogleSheetCalendarRow.edges.map((edge) => edge.node);
+  const { data } = useQuery('cal-events', CalEventsFetcher);
 
   return (
     <>
@@ -133,7 +118,7 @@ export default function Navigation() {
         </BrandName>
         <Nav mobileMenuActive={mobileMenu}>
           {menuList
-            // .filter((item) => item !== 'Calendar' || areUpcomingEvents(allEvents))
+            .filter((page) => page !== 'Calendar' || data?.length)
             .map((itemTitle, index) => (
               <Item mobileMenuActive={mobileMenu} delay={index * 125} key={index} onClick={hideMobileMenu}>
                 {itemTitle === 'Facebook' ? (

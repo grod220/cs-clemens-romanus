@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import WhiteContentBlock from '../shared/white-content-block';
-import ColorGenerator from '../shared/eventsUtil';
+import { WhiteContentBlock } from '../shared/white-content-block';
+import ColorGenerator from '../../utils/events-util';
+import { useQuery } from 'react-query';
+import { CalEventsFetcher } from '../../utils/calendar-fetcher';
 
 const TwixWrapper = styled.div`
   display: flex;
@@ -32,7 +34,7 @@ const EventTwix = styled.div`
   }
 `;
 
-const ColorBar = styled.div`
+const ColorBar = styled.div<{ sliverColor: string }>`
   height: 100%;
   width: 20px;
   background-color: ${(props) => props.sliverColor};
@@ -41,12 +43,14 @@ const ColorBar = styled.div`
   top: 0;
 `;
 
-const CalendarWidget = ({ events }) => (
-  <WhiteContentBlock title="Upcoming events">
-    <TwixWrapper>
-      {ColorGenerator.removeOldEvents(events)
-        .slice(0, 3)
-        .map((event, index) => {
+export const CalendarWidget: FC = () => {
+  const { data } = useQuery('cal-events', CalEventsFetcher);
+  if (!data?.length) return <></>;
+
+  return (
+    <WhiteContentBlock title="Upcoming events">
+      <TwixWrapper>
+        {data.slice(0, 3).map((event, index) => {
           return (
             <EventTwix key={index}>
               <ColorBar sliverColor={ColorGenerator.getColor(event.name)} />
@@ -67,8 +71,7 @@ const CalendarWidget = ({ events }) => (
             </EventTwix>
           );
         })}
-    </TwixWrapper>
-  </WhiteContentBlock>
-);
-
-export default CalendarWidget;
+      </TwixWrapper>
+    </WhiteContentBlock>
+  );
+};

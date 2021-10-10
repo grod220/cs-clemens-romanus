@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const Container = styled.div`
+const Container = styled.div<{ whiteText?: boolean }>`
   text-align: center;
   font-family: Crimson Text, georgia, serif;
   font-size: 1.25rem;
-  color: #4f4f4f;
+  color: ${({ whiteText }) => (whiteText ? 'white' : '#4f4f4f')};
   line-height: 1.875rem;
   font-style: normal;
 `;
@@ -86,7 +86,7 @@ const sendToJoe = (email: string) => {
   });
 };
 
-export const StayInTouch: FC = () => {
+export const StayInTouch: FC<{ whiteText?: boolean }> = ({ whiteText }) => {
   const [submitStatus, setSubmitStatus] = useState('ready');
   const [input, setInput] = useState('');
   const [inputStatus, setInputStatus] = useState('ready');
@@ -127,7 +127,7 @@ export const StayInTouch: FC = () => {
   };
 
   return (
-    <Container>
+    <Container whiteText={whiteText}>
       <p>
         Enter your email to signup for our regular newsletter. You’ll receive updates like church announcements, bible
         studies, upcoming events, and fun things happening at Calvary Stockholm.

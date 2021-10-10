@@ -1,18 +1,11 @@
 class ColorGenerator {
+  private readonly colorObj: Record<string, string>;
+
   constructor() {
     this.colorObj = typeof window !== 'undefined' && window.sessionStorage ? window.sessionStorage : {};
   }
 
-  removeOldEvents(eventsArr) {
-    const twentyFourHours = 1000 * 60 * 60 * 24;
-    return eventsArr.filter((event) => Date.parse(event.date) + twentyFourHours > Date.now());
-  }
-
-  hasEventsToShow(events) {
-    return Boolean(this.removeOldEvents(events).length);
-  }
-
-  getColor(name) {
+  getColor(name: string) {
     const refColors = [
       '#ef5350',
       '#EC407A',
