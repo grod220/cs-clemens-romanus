@@ -1,8 +1,5 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import 'typeface-open-sans';
-import 'typeface-open-sans-condensed';
-import 'typeface-crimson-text';
 
 import { Footer } from './footer';
 import Navigation from './navigation';
