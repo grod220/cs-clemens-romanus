@@ -62,7 +62,7 @@ const getButtonAttrs = (submitStatus: string) => {
 };
 
 const storeInSheets = (email: string) => {
-  return fetch('/.netlify/functions/googleSheets', {
+  return fetch('/api/email-submit-action', {
     body: JSON.stringify({ email: email }),
     headers: { 'content-type': 'application/json' },
     method: 'POST',
@@ -121,7 +121,7 @@ export const StayInTouch: FC<{ whiteText?: boolean }> = ({ whiteText }) => {
         .finally(() => {
           setSubmitStatus('ready');
         });
-      // Also save to sheets. Not critical to UX though.
+
       storeInSheets(input);
     }
   };
