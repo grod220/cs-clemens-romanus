@@ -33,17 +33,17 @@ const Bar = styled.span`
   margin-bottom: 0.3125rem;
 `;
 
-const TopBar = styled(Bar)<{ rotate: boolean }>`
-  transform: ${(props) => (props.rotate ? 'rotate(45deg)' : 'none')};
-  transform-origin: ${(props) => (props.rotate ? '14% 116%' : '50% 50% 0')};
+const TopBar = styled(Bar)<{ isMobile: boolean }>`
+  transform: ${(props) => (props.isMobile ? 'rotate(45deg)' : 'none')};
+  transform-origin: ${(props) => (props.isMobile ? '14% 116%' : '50% 50% 0')};
 `;
 const MidBar = styled(Bar)<{ hide: boolean }>`
   opacity: ${(props) => (props.hide ? 0 : 1)};
 `;
-const BottBar = styled(Bar)<{ rotate: boolean }>`
+const BottBar = styled(Bar)<{ isMobile: boolean }>`
   margin-bottom: 0;
-  transform: ${(props) => (props.rotate ? 'rotate(-45deg)' : 'none')};
-  transform-origin: ${(props) => (props.rotate ? '17% 14%' : '50% 50% 0')};
+  transform: ${(props) => (props.isMobile ? 'rotate(-45deg)' : 'none')};
+  transform-origin: ${(props) => (props.isMobile ? '17% 14%' : '50% 50% 0')};
 `;
 
 interface HamburgerProps {
@@ -53,8 +53,8 @@ interface HamburgerProps {
 
 export const Hamburger: FC<HamburgerProps> = ({ mobileMenuActive, triggerFunc }) => (
   <NavToggle onClick={triggerFunc}>
-    <TopBar rotate={mobileMenuActive} />
+    <TopBar isMobile={mobileMenuActive} />
     <MidBar hide={mobileMenuActive} />
-    <BottBar rotate={mobileMenuActive} />
+    <BottBar isMobile={mobileMenuActive} />
   </NavToggle>
 );

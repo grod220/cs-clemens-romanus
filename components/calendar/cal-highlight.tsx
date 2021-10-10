@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import { SubheadHighlight } from '../shared/subhead-highlight';
@@ -7,12 +7,10 @@ const Text = styled.p`
   margin-bottom: 0;
 `;
 
-const CalHighlight = () => (
+export const CalHighlight: FC = () => (
   <SubheadHighlight color="#d2374f">
     <Text>
       From Sunday service to bible studies and fun outings, there is always something to look forward to at Calvary.
     </Text>
   </SubheadHighlight>
 );
-
-export default CalHighlight;
