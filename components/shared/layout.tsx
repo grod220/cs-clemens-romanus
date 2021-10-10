@@ -4,7 +4,7 @@ import 'typeface-open-sans';
 import 'typeface-open-sans-condensed';
 import 'typeface-crimson-text';
 
-import Footer from '../shared/footer';
+import { Footer } from './footer';
 import Navigation from './navigation';
 
 const Container = styled.div`

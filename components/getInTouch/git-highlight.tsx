@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import SubheadHighlight from '../shared/subheadHighlight';
+import { SubheadHighlight } from '../shared/subhead-highlight';
 
 const Text = styled.p`
   margin-bottom: 0;
@@ -10,7 +10,7 @@ const Text = styled.p`
   }
 `;
 
-const GITHighlight = () => (
+export const GITHighlight: FC = () => (
   <SubheadHighlight color="#614e3a">
     <Text>
       Reach out to us via email ::{' '}
@@ -29,5 +29,3 @@ const GITHighlight = () => (
     </Text>
   </SubheadHighlight>
 );
-
-export default GITHighlight;

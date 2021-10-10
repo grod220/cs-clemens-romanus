@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -22,10 +22,8 @@ const Content = styled.div`
   }
 `;
 
-const SubheadHighlight = ({ children, color }) => (
+export const SubheadHighlight: FC<{ color: string }> = ({ children, color }) => (
   <Container color={color}>
     <Content>{children}</Content>
   </Container>
 );
-
-export default SubheadHighlight;

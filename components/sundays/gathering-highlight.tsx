@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import SubheadHighlight from '../shared/subheadHighlight';
+import { SubheadHighlight } from '../shared/subhead-highlight';
 
 export const GatheringHighlight: FC = () => (
   <SubheadHighlight color="#da9a50">

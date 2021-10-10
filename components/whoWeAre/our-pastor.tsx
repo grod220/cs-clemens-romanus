@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import TwoHalfWhiteBlock from '../shared/twoHalfWhiteBlock';
+import { TwoHalfWhiteBlock } from '../shared/two-half-white-block';
 import PastorPic from '../../images/who-we-are-pastor.jpg';
+import Image from 'next/image';
 
 const Title = styled.h1`
   font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
@@ -14,13 +15,9 @@ const Title = styled.h1`
   color: #848484;
 `;
 
-const FamilyImg = styled.img`
-  max-height: 500px;
-`;
-
-const OurPastor = () => (
+export const OurPastor: FC = () => (
   <TwoHalfWhiteBlock>
-    <FamilyImg src={PastorPic} />
+    <Image alt="Pastor Joe and Ursula" src={PastorPic} layout="intrinsic" placeholder="blur" className="limit-height" />
     <div>
       <Title>Our Pastor</Title>
       <p>
@@ -36,5 +33,3 @@ const OurPastor = () => (
     </div>
   </TwoHalfWhiteBlock>
 );
-
-export default OurPastor;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import styled from 'styled-components';
 
 const OuterContainer = styled.div`
@@ -48,7 +48,11 @@ const RightSide = styled.div`
   }
 `;
 
-const TwoHalfWhiteBlock = ({ children }) => (
+interface Props {
+  children: ReactElement[];
+}
+
+export const TwoHalfWhiteBlock: FC<Props> = ({ children }) => (
   <OuterContainer>
     <InnerContainer>
       <LeftSide>{children[0]}</LeftSide>
@@ -56,5 +60,3 @@ const TwoHalfWhiteBlock = ({ children }) => (
     </InnerContainer>
   </OuterContainer>
 );
-
-export default TwoHalfWhiteBlock;

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import WhiteContentBlock from '../shared/white-content-block';
+import { WhiteContentBlock } from '../shared/white-content-block';
 
 const AlignCenter = styled.div`
   text-align: center;
 `;
 
-const TheBeginning = () => (
+export const TheBeginning: FC = () => (
   <WhiteContentBlock title="A cross-centered community">
     <AlignCenter>
       <p>
@@ -19,5 +19,3 @@ const TheBeginning = () => (
     </AlignCenter>
   </WhiteContentBlock>
 );
-
-export default TheBeginning;

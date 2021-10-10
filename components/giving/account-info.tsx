@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-
-import WhiteContentBlock from '../shared/whiteContentBlock';
+import { WhiteContentBlock } from '../shared/white-content-block';
 
 const Container = styled.div`
   text-align: center;
 `;
 
-const AccountInfo = () => (
+export const AccountInfo: FC = () => (
   <WhiteContentBlock title="Account info">
     <Container>
       <p>Gifts to the church can be sent through bank transfers</p>
@@ -16,5 +15,3 @@ const AccountInfo = () => (
     </Container>
   </WhiteContentBlock>
 );
-
-export default AccountInfo;

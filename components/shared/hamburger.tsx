@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FC } from 'react';
 
 const NavToggle = styled.button`
   padding: 0 0.75rem 0.75rem;
@@ -32,25 +33,28 @@ const Bar = styled.span`
   margin-bottom: 0.3125rem;
 `;
 
-const TopBar = styled(Bar)`
+const TopBar = styled(Bar)<{ rotate: boolean }>`
   transform: ${(props) => (props.rotate ? 'rotate(45deg)' : 'none')};
   transform-origin: ${(props) => (props.rotate ? '14% 116%' : '50% 50% 0')};
 `;
-const MidBar = styled(Bar)`
+const MidBar = styled(Bar)<{ hide: boolean }>`
   opacity: ${(props) => (props.hide ? 0 : 1)};
 `;
-const BottBar = styled(Bar)`
+const BottBar = styled(Bar)<{ rotate: boolean }>`
   margin-bottom: 0;
   transform: ${(props) => (props.rotate ? 'rotate(-45deg)' : 'none')};
   transform-origin: ${(props) => (props.rotate ? '17% 14%' : '50% 50% 0')};
 `;
 
-const Hamburger = ({ mobileMenuActive, triggerFunc }) => (
+interface HamburgerProps {
+  mobileMenuActive: boolean;
+  triggerFunc: () => void;
+}
+
+export const Hamburger: FC<HamburgerProps> = ({ mobileMenuActive, triggerFunc }) => (
   <NavToggle onClick={triggerFunc}>
-    <TopBar rotate={mobileMenuActive ? 1 : 0} />
+    <TopBar rotate={mobileMenuActive} />
     <MidBar hide={mobileMenuActive} />
-    <BottBar rotate={mobileMenuActive ? 1 : 0} />
+    <BottBar rotate={mobileMenuActive} />
   </NavToggle>
 );
-
-export default Hamburger;
