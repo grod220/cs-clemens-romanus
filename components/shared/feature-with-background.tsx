@@ -47,10 +47,11 @@ const Title = styled.h1`
 interface Props {
   image: StaticImageData;
   title?: string;
+  customHeight?: string;
 }
 
-export const FeatureWithBackground: FC<Props> = ({ children, image, title }) => (
-  <Container>
+export const FeatureWithBackground: FC<Props> = ({ children, customHeight, image, title }) => (
+  <Container customHeight={customHeight}>
     <HighlightText>
       {title ? <Title>{title}</Title> : ''}
       {children}

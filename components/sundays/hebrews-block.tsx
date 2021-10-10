@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import PewsImg from '../../images/sundays-pews.jpg';
-import FeatureWithBackground from '../shared/feature-with-background';
+import { FeatureWithBackground } from '../shared/feature-with-background';
 
-const HebrewsBlock = () => (
+export const HebrewsBlock: FC = () => (
   <FeatureWithBackground image={PewsImg}>
     “And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the
     habit of some, but encouraging one another, and all the more as you see the Day drawing near.”
@@ -11,5 +11,3 @@ const HebrewsBlock = () => (
     Hebrews 10:24-25
   </FeatureWithBackground>
 );
-
-export default HebrewsBlock;

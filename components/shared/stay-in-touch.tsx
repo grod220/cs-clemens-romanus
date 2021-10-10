@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const Container = styled.div<{ white: boolean }>`
+const Container = styled.div`
   text-align: center;
   font-family: Crimson Text, georgia, serif;
   font-size: 1.25rem;
-  color: ${({ white }) => (white ? 'white' : '#4f4f4f')};
+  color: #4f4f4f;
   line-height: 1.875rem;
   font-style: normal;
 `;
@@ -127,9 +127,9 @@ export const StayInTouch: FC = () => {
   };
 
   return (
-    <Container white>
+    <Container>
       <p>
-        Enter your email to signup for our regular newsletter. You’ll recieve updates like church announcements, bible
+        Enter your email to signup for our regular newsletter. You’ll receive updates like church announcements, bible
         studies, upcoming events, and fun things happening at Calvary Stockholm.
       </p>
       <ActionSection

@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+
 import '../styles/layout.css';
 import '../styles/stay-in-touch.css';
 

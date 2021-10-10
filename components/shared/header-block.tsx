@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-import { Parallax } from 'react-scroll-parallax';
-import { isMobile } from 'react-device-detect';
+import { SendToBack } from './send-to-back';
+import Image from 'next/image';
 
 const Container = styled.div`
   height: 26rem;
@@ -10,15 +10,7 @@ const Container = styled.div`
   align-items: center;
   overflow: hidden;
   background-color: #4a4a4a;
-`;
-
-const BackgroundImg = styled.div`
-  background: url('${(props) => props.image}');
-  width: 100vw;
-  max-width: 100%;
-  height: 39rem;
-  background-size: cover;
-  background-position: center;
+  position: relative;
 `;
 
 const Title = styled.h1`
@@ -34,13 +26,11 @@ const Title = styled.h1`
   margin: 17px 10px 0;
 `;
 
-const HeaderBlock = ({ img, titleText }) => (
+export const HeaderBlock: FC<{ img: StaticImageData; titleText: string }> = ({ img, titleText }) => (
   <Container>
     <Title>{titleText}</Title>
-    <Parallax y={[-40, 10]} disabled={isMobile}>
-      <BackgroundImg image={img} />
-    </Parallax>
+    <SendToBack>
+      <Image alt={titleText} src={img} layout="fill" objectFit="cover" placeholder="blur" />
+    </SendToBack>
   </Container>
 );
-
-export default HeaderBlock;

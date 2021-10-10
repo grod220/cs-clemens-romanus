@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import WhiteContentBlock from '../shared/white-content-block';
+import { WhiteContentBlock } from '../shared/white-content-block';
 
 const Container = styled.div`
   h3 {
@@ -9,7 +9,7 @@ const Container = styled.div`
   }
 `;
 
-const WhatToExpect = () => (
+export const WhatToExpect: FC = () => (
   <WhiteContentBlock title={'What to expect'}>
     <Container>
       <h3>We Worship</h3>
@@ -32,5 +32,3 @@ const WhatToExpect = () => (
     </Container>
   </WhiteContentBlock>
 );
-
-export default WhatToExpect;

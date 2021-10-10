@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import TwoHalfWhiteBlock from '../shared/twoHalfWhiteBlock';
@@ -34,7 +34,7 @@ const LeftDivFix = styled.div`
   width: 100%;
 `;
 
-const ServiceTimeAndLocation = () => (
+export const ServiceTimeAndLocation: FC = () => (
   <TwoHalfWhiteBlock>
     <LeftDivFix>
       <iframe
@@ -56,5 +56,3 @@ const ServiceTimeAndLocation = () => (
     </div>
   </TwoHalfWhiteBlock>
 );
-
-export default ServiceTimeAndLocation;
