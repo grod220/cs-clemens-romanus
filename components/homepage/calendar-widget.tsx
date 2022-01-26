@@ -54,13 +54,7 @@ export const CalendarWidget: FC = () => {
           return (
             <EventTwix key={index}>
               <ColorBar sliverColor={ColorGenerator.getColor(event.name)} />
-              <span>
-                {new Date(event.date).toLocaleDateString('en', {
-                  weekday: 'long',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </span>
+              <span>{event.date}</span>
               {event.time && <span>@ {event.time}</span>}
               <span>::</span>
               <span>
