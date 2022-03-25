@@ -99,7 +99,7 @@ const MobileMenu = styled.div<{ mobileMenuActive: boolean }>`
   opacity: ${({ mobileMenuActive }) => (mobileMenuActive ? 0.98 : 0)};
 `;
 
-const menuList = ['Sundays', 'Who we are', 'Calendar', 'Get in touch', 'Facebook'];
+const menuList = ['Sundays', 'Who we are', 'Calendar', 'Get in touch', 'Facebook', 'Instagram'];
 
 export default function Navigation() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -123,6 +123,10 @@ export default function Navigation() {
               <Item mobileMenuActive={mobileMenu} delay={index * 125} key={index} onClick={hideMobileMenu}>
                 {itemTitle === 'Facebook' ? (
                   <a href="https://www.facebook.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
+                    {itemTitle}
+                  </a>
+                ) : itemTitle === 'Instagram' ? (
+                  <a href="https://www.instagram.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
                     {itemTitle}
                   </a>
                 ) : (
