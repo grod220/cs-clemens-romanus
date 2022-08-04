@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout } from '../components/shared/layout';
 import Hero from '../images/calendar-group-pic.jpg';
-import { StayInTouchAlt } from '../components/calendar/stay-in-touch-alt';
 import { NextPage } from 'next';
 import { HeadTag, Page } from '../components/shared/head-tag';
 import { HeaderBlock } from '../components/shared/header-block';
@@ -17,7 +16,7 @@ const Calendar: NextPage<{ calEvents: CalendarEvent[] }> = ({ calEvents }) => (
     <HeaderBlock img={Hero} titleText="Upcoming Events" />
     <CalHighlight />
     <CalendarEvents calEvents={calEvents} />
-    <StayInTouchAlt />
+    {/*<StayInTouchAlt />*/}
   </Layout>
 );
 

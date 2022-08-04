@@ -8,8 +8,6 @@ import { CoreValues } from '../components/shared/core-values';
 import { PreFooterImg } from '../components/homepage/pre-footer-img';
 import { HeadTag, Page } from '../components/shared/head-tag';
 import { CalendarWidget } from '../components/homepage/calendar-widget';
-import { WhiteContentBlock } from '../components/shared/white-content-block';
-import { StayInTouch } from '../components/shared/stay-in-touch';
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +20,9 @@ const Home: NextPage = () => {
         <SummaryBlock />
         <CalendarWidget />
         <CoreValues />
-        <WhiteContentBlock title="Stay in touch">
-          <StayInTouch />
-        </WhiteContentBlock>
+        {/*<WhiteContentBlock title="Stay in touch">*/}
+        {/*  <StayInTouch />*/}
+        {/*</WhiteContentBlock>*/}
         <PreFooterImg />
       </Layout>
     </>
