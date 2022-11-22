@@ -12,6 +12,7 @@ import { OurPastor } from '../components/whoWeAre/our-pastor';
 import { CoreValues } from '../components/shared/core-values';
 import { ChurchFamilyPic } from '../components/whoWeAre/churchFamilyPic';
 import { BiblePromo } from '../components/whoWeAre/bible-promo';
+import { WhatWeBelieveIn } from '../components/whoWeAre/what-we-believe-in';
 
 const WhoWeAre: NextPage = () => (
   <Layout>
@@ -21,6 +22,7 @@ const WhoWeAre: NextPage = () => (
     <OurMission />
     <OurPastor />
     <CoreValues />
+    <WhatWeBelieveIn />
     <ChurchFamilyPic />
     <BiblePromo />
   </Layout>
