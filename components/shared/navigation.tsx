@@ -99,7 +99,7 @@ const MobileMenu = styled.div<{ mobileMenuActive: boolean }>`
   opacity: ${({ mobileMenuActive }) => (mobileMenuActive ? 0.98 : 0)};
 `;
 
-const menuList = ['Sundays', 'Who we are', 'Calendar', 'Get in touch', 'Facebook', 'Instagram'];
+const menuList = ['Sundays', 'Who we are', 'Calendar', 'Get in touch', 'Giving', 'Facebook', 'Instagram'];
 
 export default function Navigation() {
   const [mobileMenu, setMobileMenu] = useState(false);
