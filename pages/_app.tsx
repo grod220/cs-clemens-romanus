@@ -13,6 +13,7 @@ const queryClient = new QueryClient();
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
+      {/* @ts-ignore */}
       <Component {...pageProps} />
     </QueryClientProvider>
   );
