@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import RamenGroupPic from '../../images/homepage-ramen.jpg';
+import CongregationPic from '../../images/homepage-congregation-2023.jpg';
 import Image from 'next/image';
 
 const Container = styled.div`
@@ -15,12 +15,6 @@ const Container = styled.div`
 
 export const PreFooterImg: FC = () => (
   <Container>
-    <Image
-      alt="Group pic of eating at a ramen restaurant"
-      src={RamenGroupPic}
-      layout="fill"
-      objectFit="cover"
-      placeholder="blur"
-    />
+    <Image alt="Congregation on a Sunday" src={CongregationPic} layout="fill" objectFit="cover" placeholder="blur" />
   </Container>
 );

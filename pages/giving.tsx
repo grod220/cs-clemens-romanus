@@ -16,7 +16,7 @@ const Giving: NextPage = () => (
     <GivingHighlight />
     <AccountInfo />
     {/*<SupportedMinistries /> */}
-    <HowWeSeeGiving />
+    {/*<HowWeSeeGiving />*/}
   </Layout>
 );
 

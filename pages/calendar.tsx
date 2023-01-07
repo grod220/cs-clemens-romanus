@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from '../components/shared/layout';
-import Hero from '../images/calendar-group-pic.jpg';
+import Hero from '../images/calendar-group-pic-2023.jpg';
 import { NextPage } from 'next';
 import { HeadTag, Page } from '../components/shared/head-tag';
 import { HeaderBlock } from '../components/shared/header-block';

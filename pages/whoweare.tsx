@@ -24,7 +24,7 @@ const WhoWeAre: NextPage = () => (
     <CoreValues />
     <WhatWeBelieveIn />
     <ChurchFamilyPic />
-    <BiblePromo />
+    {/*<BiblePromo />*/}
   </Layout>
 );
 
