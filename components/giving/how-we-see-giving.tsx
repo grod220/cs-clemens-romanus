@@ -9,7 +9,7 @@ const Styling = styled.div`
   letter-spacing: 1px;
 `;
 
-export const HowWeSeeGiving: FC = () => (
+export const HowWeSeeGiving = () => (
   <FeatureWithBackground image={TreesPic} customHeight="330px">
     <Styling>
       Learn more about{' '}

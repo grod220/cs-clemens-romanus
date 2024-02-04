@@ -32,14 +32,18 @@ const ContentWrapper = styled.div`
 `;
 
 const BrandName = styled.h2`
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.6rem;
   letter-spacing: 0.4rem;
 `;
 
-export const Footer: FC = () => (
+export const Footer = () => (
   <Container>
     <ContentWrapper>
       <BrandName>Calvary Stockholm</BrandName>

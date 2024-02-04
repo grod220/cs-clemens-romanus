@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 
 const OuterContainer = styled.div`
@@ -9,7 +9,10 @@ const OuterContainer = styled.div`
 const InnerContainer = styled.div`
   width: 78.75rem;
   padding: 5.9375rem 0;
-  font-family: Crimson Text, georgia, serif;
+  font-family:
+    Crimson Text,
+    georgia,
+    serif;
   font-size: 1.25rem;
   color: #4f4f4f;
   line-height: 1.875rem;
@@ -20,7 +23,11 @@ const InnerContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
@@ -29,7 +36,7 @@ const Title = styled.h1`
   color: #848484;
 `;
 
-export const WhiteContentBlock: FC<{ title: string }> = ({ children, title }) => (
+export const WhiteContentBlock = ({ children, title }: { title: string; children: ReactNode }) => (
   <OuterContainer>
     <InnerContainer>
       {title ? <Title>{title}</Title> : ''}

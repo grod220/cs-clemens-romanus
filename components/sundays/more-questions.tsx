@@ -6,7 +6,11 @@ import Link from 'next/link';
 import { WhiteAnchor } from '../shared/white-anchor';
 
 const CustomStyle = styled.div`
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
   line-height: 3rem;
   font-style: normal;
   font-size: 34px;
@@ -21,16 +25,19 @@ const CustomStyle = styled.div`
 `;
 
 const ItalicCursive = styled.i`
-  font-family: Crimson Text, georgia, serif;
+  font-family:
+    Crimson Text,
+    georgia,
+    serif;
   letter-spacing: 1px;
 `;
 
-export const MoreQuestions: FC = () => (
+export const MoreQuestions = () => (
   <FeatureWithBackground image={CityScape}>
     <CustomStyle>
       Have more questions? <br />
       Write us an email or message us on Facebook, we’re here for you! <br />
-      <Link href="/getintouch">
+      <Link href="/getintouch" legacyBehavior>
         <WhiteAnchor>
           <ItalicCursive>Get in touch →</ItalicCursive>
         </WhiteAnchor>

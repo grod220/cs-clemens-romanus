@@ -48,7 +48,7 @@ interface MetaTags {
   description: string;
 }
 
-export const HeadTag: FC<{ page: Page }> = ({ page }) => {
+export const HeadTag = ({ page }: { page: Page }) => {
   return (
     <Head>
       <title>{PageTagMapping[page].title}</title>

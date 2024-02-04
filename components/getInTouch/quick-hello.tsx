@@ -6,7 +6,11 @@ import PastorJoe from '../../images/get-in-touch-joe.jpg';
 import Image from 'next/image';
 
 const Title = styled.h1`
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;

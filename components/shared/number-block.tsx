@@ -24,7 +24,7 @@ interface NumberBlockProps {
   smallText: string;
 }
 
-export const NumberBlock: FC<NumberBlockProps> = ({ num, bigText, smallText }) => (
+export const NumberBlock = ({ num, bigText, smallText }: NumberBlockProps) => (
   <Container>
     <BigNum>{num}</BigNum>
     <BigText>{bigText}</BigText>

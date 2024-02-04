@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import { TwoHalfWhiteBlock } from '../shared/two-half-white-block';
 
 const Title = styled.h1`
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
@@ -16,7 +20,11 @@ const Title = styled.h1`
 const BoxLink = styled.div`
   background-color: #54c5a6;
   text-transform: uppercase;
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   padding: 10px 34px;
   color: white;
@@ -34,7 +42,7 @@ const LeftDivFix = styled.div`
   width: 100%;
 `;
 
-export const ServiceTimeAndLocation: FC = () => (
+export const ServiceTimeAndLocation = () => (
   <TwoHalfWhiteBlock>
     <LeftDivFix>
       <iframe

@@ -10,7 +10,7 @@ const Text = styled.p`
   }
 `;
 
-export const GITHighlight: FC = () => (
+export const GITHighlight = () => (
   <SubheadHighlight color="#614e3a">
     <Text>
       Reach out to us via email ::{' '}

@@ -5,7 +5,11 @@ import CongregationImg from '../../images/homepage-congregation.jpg';
 import { FeatureWithBackground } from '../shared/feature-with-background';
 
 const CustomStyle = styled.div`
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   font-style: normal;
   line-height: 4.4375rem;

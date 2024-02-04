@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { SubheadHighlight } from '../shared/subhead-highlight';
 
-export const GatheringHighlight: FC = () => (
+export const GatheringHighlight = () => (
   <SubheadHighlight color="#da9a50">
     <p>
       Gathering every Sunday forms the heart of our ministry. It’s the time we meet as a family, fellowship, worship,

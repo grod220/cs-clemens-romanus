@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -22,7 +22,7 @@ const Content = styled.div`
   }
 `;
 
-export const SubheadHighlight: FC<{ color: string }> = ({ children, color }) => (
+export const SubheadHighlight = ({ children, color }: { color: string; children: ReactNode }) => (
   <Container color={color}>
     <Content>{children}</Content>
   </Container>

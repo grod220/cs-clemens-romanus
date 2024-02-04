@@ -29,7 +29,7 @@ const Separator = styled.div`
   }
 `;
 
-export const CoreValues: FC = () => (
+export const CoreValues = () => (
   <FeatureWithBackground title="Our core values" image={SkyBackground}>
     <BlockWrapper>
       <NumberBlock num={1} bigText="Jesus Christ" smallText="our foundation" />

@@ -9,7 +9,7 @@ const Container = styled.div`
   }
 `;
 
-export const WhatToExpect: FC = () => (
+export const WhatToExpect = () => (
   <WhiteContentBlock title={'What to expect'}>
     <Container>
       <h3>We Worship</h3>

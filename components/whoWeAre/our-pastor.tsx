@@ -6,7 +6,11 @@ import PastorPic from '../../images/who-we-are-pastor.jpg';
 import Image from 'next/image';
 
 const Title = styled.h1`
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
@@ -15,7 +19,7 @@ const Title = styled.h1`
   color: #848484;
 `;
 
-export const OurPastor: FC = () => (
+export const OurPastor = () => (
   <TwoHalfWhiteBlock>
     <Image alt="Pastor Joe and Ursula" src={PastorPic} layout="intrinsic" placeholder="blur" className="limit-height" />
     <div>

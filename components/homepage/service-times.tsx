@@ -7,7 +7,11 @@ const Container = styled.div`
 `;
 
 const ServiceTime = styled.h3`
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
 `;
 
 const MapsLink = styled.span`
@@ -20,7 +24,7 @@ const MapsLink = styled.span`
   }
 `;
 
-export const ServiceTimes: FC = () => (
+export const ServiceTimes = () => (
   <WhiteContentBlock title="Service Times">
     <Container>
       {/*<ServiceTime>*/}
