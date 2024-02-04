@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import CongregationPic from '../../images/homepage-congregation-2023.jpg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Container = styled.div`
   height: 31.25rem;

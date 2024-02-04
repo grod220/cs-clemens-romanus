@@ -115,38 +115,36 @@ export default function Navigation() {
   const hideMobileMenu = () => setMobileMenu(false);
   const { data } = useQuery('cal-events', CalEventsFetcher);
 
-  return (
-    <>
-      <Container>
-        <BrandName>
-          <Hamburger mobileMenuActive={mobileMenu} triggerFunc={toggleMobileMenu} />
-          <Link href="/" legacyBehavior>
-            <a onClick={hideMobileMenu}>Calvary Stockholm</a>
-          </Link>
-        </BrandName>
-        <Nav mobileMenuActive={mobileMenu}>
-          {menuList
-            .filter((page) => page !== 'Calendar' || data?.length)
-            .map((itemTitle, index) => (
-              <Item mobileMenuActive={mobileMenu} delay={index * 125} key={index} onClick={hideMobileMenu}>
-                {itemTitle === 'Facebook' ? (
-                  <a href="https://www.facebook.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
-                    {itemTitle}
-                  </a>
-                ) : itemTitle === 'Instagram' ? (
-                  <a href="https://www.instagram.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
-                    {itemTitle}
-                  </a>
-                ) : (
-                  <Link href={'/' + itemTitle.toLocaleLowerCase().replace(/ /g, '')} legacyBehavior>
-                    <a>{itemTitle}</a>
-                  </Link>
-                )}
-              </Item>
-            ))}
-        </Nav>
-      </Container>
-      <MobileMenu mobileMenuActive={mobileMenu} />
-    </>
-  );
+  return <>
+    <Container>
+      <BrandName>
+        <Hamburger mobileMenuActive={mobileMenu} triggerFunc={toggleMobileMenu} />
+        <Link href="/" legacyBehavior>
+          <a onClick={hideMobileMenu}>Calvary Stockholm</a>
+        </Link>
+      </BrandName>
+      <Nav mobileMenuActive={mobileMenu}>
+        {menuList
+          .filter((page) => page !== 'Calendar' || data?.length)
+          .map((itemTitle, index) => (
+            <Item mobileMenuActive={mobileMenu} delay={index * 125} key={index} onClick={hideMobileMenu}>
+              {itemTitle === 'Facebook' ? (
+                <a href="https://www.facebook.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
+                  {itemTitle}
+                </a>
+              ) : itemTitle === 'Instagram' ? (
+                <a href="https://www.instagram.com/calvarystockholm/" target="_blank" rel="noopener noreferrer">
+                  {itemTitle}
+                </a>
+              ) : (
+                <Link href={'/' + itemTitle.toLocaleLowerCase().replace(/ /g, '')} legacyBehavior>
+                  <a>{itemTitle}</a>
+                </Link>
+              )}
+            </Item>
+          ))}
+      </Nav>
+    </Container>
+    <MobileMenu mobileMenuActive={mobileMenu} />
+  </>;
 }

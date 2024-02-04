@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { SendToBack } from './send-to-back';
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/legacy/image";
 
 const Container = styled.div`
   height: 26rem;

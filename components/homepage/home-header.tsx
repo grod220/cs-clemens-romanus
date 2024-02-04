@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import HeroImg from '../../images/homepage-hero-night.jpg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { SendToBack } from '../shared/send-to-back';
 
 const Container = styled.div`

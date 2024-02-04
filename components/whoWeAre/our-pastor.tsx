@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { TwoHalfWhiteBlock } from '../shared/two-half-white-block';
 import PastorPic from '../../images/who-we-are-pastor.jpg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Title = styled.h1`
   font-family:
