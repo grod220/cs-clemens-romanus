@@ -27,6 +27,7 @@
     "typeface-open-sans-condensed": "^1.1.13"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.41.3",
     "@types/node": "20.11.16",
     "@types/react": "18.2.52",
     "@types/react-modal": "^3.16.3",
