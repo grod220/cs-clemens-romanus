@@ -20,7 +20,6 @@ const Sundays: NextPage = () => (
     <HeaderBlock img={Hero} titleText="Sunday Gatherings" />
     <GatheringHighlight />
     <ServiceTimeAndLocation />
-    <SpotifyPreview />
     <HebrewsBlock />
     <WhatToExpect />
     <ListenToAService />

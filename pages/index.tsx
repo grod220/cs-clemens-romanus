@@ -8,6 +8,8 @@ import { CoreValues } from '../components/shared/core-values';
 import { PreFooterImg } from '../components/homepage/pre-footer-img';
 import { HeadTag, Page } from '../components/shared/head-tag';
 import { CalendarWidget } from '../components/homepage/calendar-widget';
+import { SpotifyPreview } from '../components/sundays/spotify-preview';
+import React from 'react';
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +21,7 @@ const Home: NextPage = () => {
         <ServiceTimes />
         <SummaryBlock />
         <CalendarWidget />
+        <SpotifyPreview />
         <CoreValues />
         {/*<WhiteContentBlock title="Stay in touch">*/}
         {/*  <StayInTouch />*/}
