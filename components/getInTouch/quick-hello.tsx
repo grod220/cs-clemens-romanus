@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { TwoHalfWhiteBlock } from '../shared/two-half-white-block';
 import PastorJoe from '../../images/get-in-touch-joe.jpg';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 const Title = styled.h1`
   font-family:
@@ -21,7 +21,16 @@ const Title = styled.h1`
 
 const QuickHello = () => (
   <TwoHalfWhiteBlock>
-    <Image alt="Pastor Joe" src={PastorJoe} layout="intrinsic" placeholder="blur" className="limit-height" />
+    <Image
+      alt="Pastor Joe"
+      src={PastorJoe}
+      placeholder="blur"
+      className="limit-height"
+      style={{
+        maxWidth: '100%',
+        height: 'auto',
+      }}
+    />
     <div>
       <Title>A quick hello from Joe</Title>
       <p>

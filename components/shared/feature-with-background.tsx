@@ -1,7 +1,7 @@
 import React, { FC, ReactDOM, ReactNode } from 'react';
 import styled from 'styled-components';
 import { SendToBack } from './send-to-back';
-import Image, { StaticImageData } from "next/legacy/image";
+import Image, { StaticImageData } from 'next/image';
 
 const Container = styled.div<{ customHeight?: string }>`
   height: ${({ customHeight }) => (customHeight ? customHeight : '31.25rem')};
@@ -62,7 +62,16 @@ export const FeatureWithBackground = ({ children, customHeight, image, title }: 
       {children}
     </HighlightText>
     <SendToBack>
-      <Image alt={title || ''} src={image} layout="fill" objectFit="cover" placeholder="blur" />
+      <Image
+        alt={title || ''}
+        src={image}
+        placeholder="blur"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'cover',
+        }}
+      />
     </SendToBack>
   </Container>
 );

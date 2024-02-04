@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import HeroImg from '../../images/homepage-hero-night.jpg';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import { SendToBack } from '../shared/send-to-back';
 
 const Container = styled.div`
@@ -81,7 +81,16 @@ export const HomeHeader = () => (
       </Statement>
     </MissionBlock>
     <SendToBack>
-      <Image alt="Calvary Stockholm location" src={HeroImg} layout="fill" objectFit="cover" placeholder="blur" />
+      <Image
+        alt="Calvary Stockholm location"
+        src={HeroImg}
+        placeholder="blur"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'cover',
+        }}
+      />
     </SendToBack>
   </Container>
 );

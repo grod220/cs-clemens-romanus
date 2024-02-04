@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { SendToBack } from './send-to-back';
-import Image, { StaticImageData } from "next/legacy/image";
+import Image, { StaticImageData } from 'next/image';
 
 const Container = styled.div`
   height: 26rem;
@@ -33,7 +33,16 @@ export const HeaderBlock = ({ img, titleText }: { img: StaticImageData; titleTex
   <Container>
     <Title>{titleText}</Title>
     <SendToBack>
-      <Image alt={titleText} src={img} layout="fill" objectFit="cover" placeholder="blur" />
+      <Image
+        alt={titleText}
+        src={img}
+        placeholder="blur"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'cover',
+        }}
+      />
     </SendToBack>
   </Container>
 );
