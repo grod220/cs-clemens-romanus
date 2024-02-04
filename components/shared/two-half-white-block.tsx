@@ -9,7 +9,10 @@ const OuterContainer = styled.div`
 const InnerContainer = styled.div`
   width: 78.75rem;
   padding: 5.9375rem 0;
-  font-family: Crimson Text, georgia, serif;
+  font-family:
+    Crimson Text,
+    georgia,
+    serif;
   font-size: 1.25rem;
   color: #4f4f4f;
   line-height: 1.875rem;
@@ -52,7 +55,7 @@ interface Props {
   children: ReactElement[];
 }
 
-export const TwoHalfWhiteBlock: FC<Props> = ({ children }) => (
+export const TwoHalfWhiteBlock = ({ children }: Props) => (
   <OuterContainer>
     <InnerContainer>
       <LeftSide>{children[0]}</LeftSide>

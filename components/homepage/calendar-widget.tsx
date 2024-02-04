@@ -18,7 +18,9 @@ const EventTwix = styled.div`
   justify-content: center;
   font-size: 22px;
   padding: 30px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   flex-wrap: wrap;
   max-width: 1040px;
@@ -43,7 +45,7 @@ const ColorBar = styled.div<{ sliverColor: string }>`
   top: 0;
 `;
 
-export const CalendarWidget: FC = () => {
+export const CalendarWidget = () => {
   const { data } = useQuery('cal-events', CalEventsFetcher);
   if (!data?.length) return <></>;
 

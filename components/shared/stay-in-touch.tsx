@@ -5,7 +5,10 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 const Container = styled.div<{ whiteText?: boolean }>`
   text-align: center;
-  font-family: Crimson Text, georgia, serif;
+  font-family:
+    Crimson Text,
+    georgia,
+    serif;
   font-size: 1.25rem;
   color: ${({ whiteText }) => (whiteText ? 'white' : '#4f4f4f')};
   line-height: 1.875rem;
@@ -36,7 +39,11 @@ const SubmitButton = styled.button<{ submitStatus: string }>`
   color: white;
   text-transform: uppercase;
   padding: 0 30px;
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-size: 18px;
   border: none;
   margin-left: 5px;
@@ -86,7 +93,7 @@ const sendToJoe = (email: string) => {
   });
 };
 
-export const StayInTouch: FC<{ whiteText?: boolean }> = ({ whiteText }) => {
+export const StayInTouch = ({ whiteText }: { whiteText?: boolean }) => {
   const [submitStatus, setSubmitStatus] = useState('ready');
   const [input, setInput] = useState('');
   const [inputStatus, setInputStatus] = useState('ready');

@@ -12,6 +12,7 @@ import { HebrewsBlock } from '../components/sundays/hebrews-block';
 import { WhatToExpect } from '../components/sundays/what-to-expect';
 import { ListenToAService } from '../components/sundays/listen-to-a-service';
 import { MoreQuestions } from '../components/sundays/more-questions';
+import { SpotifyPreview } from '../components/sundays/spotify-preview';
 
 const Sundays: NextPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const Sundays: NextPage = () => (
     <HeaderBlock img={Hero} titleText="Sunday Gatherings" />
     <GatheringHighlight />
     <ServiceTimeAndLocation />
+    <SpotifyPreview />
     <HebrewsBlock />
     <WhatToExpect />
     <ListenToAService />

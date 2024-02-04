@@ -51,7 +51,7 @@ interface HamburgerProps {
   triggerFunc: () => void;
 }
 
-export const Hamburger: FC<HamburgerProps> = ({ mobileMenuActive, triggerFunc }) => (
+export const Hamburger = ({ mobileMenuActive, triggerFunc }: HamburgerProps) => (
   <NavToggle onClick={triggerFunc}>
     <TopBar isMobile={mobileMenuActive} />
     <MidBar hide={mobileMenuActive} />

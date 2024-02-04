@@ -7,7 +7,7 @@ const AlignCenter = styled.div`
   text-align: center;
 `;
 
-export const TheBeginning: FC = () => (
+export const TheBeginning = () => (
   <WhiteContentBlock title="A cross-centered community">
     <AlignCenter>
       <p>

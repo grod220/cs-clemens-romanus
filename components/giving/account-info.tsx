@@ -6,7 +6,7 @@ const Container = styled.div`
   text-align: center;
 `;
 
-export const AccountInfo: FC = () => (
+export const AccountInfo = () => (
   <WhiteContentBlock title="Account info">
     <Container>
       <p>Gifts to the church can be sent through bank transfers</p>

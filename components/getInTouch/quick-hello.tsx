@@ -6,7 +6,11 @@ import PastorJoe from '../../images/get-in-touch-joe.jpg';
 import Image from 'next/image';
 
 const Title = styled.h1`
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
@@ -17,7 +21,16 @@ const Title = styled.h1`
 
 const QuickHello = () => (
   <TwoHalfWhiteBlock>
-    <Image alt="Pastor Joe" src={PastorJoe} layout="intrinsic" placeholder="blur" className="limit-height" />
+    <Image
+      alt="Pastor Joe"
+      src={PastorJoe}
+      placeholder="blur"
+      className="limit-height"
+      style={{
+        maxWidth: '100%',
+        height: 'auto',
+      }}
+    />
     <div>
       <Title>A quick hello from Joe</Title>
       <p>

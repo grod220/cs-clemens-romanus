@@ -33,7 +33,11 @@ const Container = styled.div`
 
 const BrandName = styled.h1`
   display: block;
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.35rem;
@@ -53,7 +57,11 @@ const BrandName = styled.h1`
 const Nav = styled.ul<{ mobileMenuActive: boolean }>`
   list-style-type: none;
   text-transform: uppercase;
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 600;
   letter-spacing: 0.135rem;
   font-size: 0.9844rem;
@@ -112,7 +120,7 @@ export default function Navigation() {
       <Container>
         <BrandName>
           <Hamburger mobileMenuActive={mobileMenu} triggerFunc={toggleMobileMenu} />
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a onClick={hideMobileMenu}>Calvary Stockholm</a>
           </Link>
         </BrandName>
@@ -130,7 +138,7 @@ export default function Navigation() {
                     {itemTitle}
                   </a>
                 ) : (
-                  <Link href={'/' + itemTitle.toLocaleLowerCase().replace(/ /g, '')}>
+                  <Link href={'/' + itemTitle.toLocaleLowerCase().replace(/ /g, '')} legacyBehavior>
                     <a>{itemTitle}</a>
                   </Link>
                 )}

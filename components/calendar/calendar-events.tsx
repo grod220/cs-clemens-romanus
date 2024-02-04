@@ -37,10 +37,14 @@ const EventBox = styled.div<{ boxColor: string }>`
 const EventName = styled.p`
   font-weight: bold;
   font-size: 27px;
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
 `;
 
-export const CalendarEvents: FC<{ calEvents: CalendarEvent[] }> = ({ calEvents }) => {
+export const CalendarEvents = ({ calEvents }: { calEvents: CalendarEvent[] }) => {
   return (
     <Container>
       <InnerContainer>

@@ -13,8 +13,17 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-export const PreFooterImg: FC = () => (
+export const PreFooterImg = () => (
   <Container>
-    <Image alt="Congregation on a Sunday" src={CongregationPic} layout="fill" objectFit="cover" placeholder="blur" />
+    <Image
+      alt="Congregation on a Sunday"
+      src={CongregationPic}
+      placeholder="blur"
+      fill
+      sizes="100vw"
+      style={{
+        objectFit: 'cover',
+      }}
+    />
   </Container>
 );

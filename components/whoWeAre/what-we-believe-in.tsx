@@ -12,7 +12,7 @@ const LightGray = styled.span`
   font-style: italic;
 `;
 
-export const WhatWeBelieveIn: FC = () => (
+export const WhatWeBelieveIn = () => (
   <WhiteContentBlock title="What we believe in">
     <AlignLeft>
       <ol>

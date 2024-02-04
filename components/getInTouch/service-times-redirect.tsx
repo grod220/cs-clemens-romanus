@@ -9,7 +9,7 @@ import { WhiteAnchor } from '../shared/white-anchor';
 export const ServiceTimesRedirect = () => (
   <FeatureWithBackground image={CommunionPic} customHeight="300px">
     For service times, checkout{' '}
-    <Link href="/sundays">
+    <Link href="/sundays" legacyBehavior>
       <WhiteAnchor>the Sundays Page →</WhiteAnchor>
     </Link>
   </FeatureWithBackground>

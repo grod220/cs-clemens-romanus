@@ -39,7 +39,11 @@ const MissionBlock = styled.div`
 `;
 
 const PreText = styled.div`
-  font-family: Open Sans Condensed, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans Condensed,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.135rem;
@@ -47,7 +51,11 @@ const PreText = styled.div`
 `;
 
 const Statement = styled.div`
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family:
+    Open Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-size: 5rem;
   line-height: 5.1328rem;
   font-weight: 600;
@@ -62,7 +70,7 @@ const Statement = styled.div`
   }
 `;
 
-export const HomeHeader: FC = () => (
+export const HomeHeader = () => (
   <Container>
     <MissionBlock>
       <PreText>We are focused on God&apos;s mission for us:</PreText>
@@ -73,7 +81,16 @@ export const HomeHeader: FC = () => (
       </Statement>
     </MissionBlock>
     <SendToBack>
-      <Image alt="Calvary Stockholm location" src={HeroImg} layout="fill" objectFit="cover" placeholder="blur" />
+      <Image
+        alt="Calvary Stockholm location"
+        src={HeroImg}
+        placeholder="blur"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'cover',
+        }}
+      />
     </SendToBack>
   </Container>
 );
