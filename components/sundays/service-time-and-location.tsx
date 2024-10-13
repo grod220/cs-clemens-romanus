@@ -52,7 +52,7 @@ export const ServiceTimeAndLocation = () => (
         frameBorder="0"
         title="Map location of Calvary Stockholm"
       />
-      <MapsAnchor href="https://goo.gl/maps/B5uYD1Tn7VsyYUsv7" target="_blank">
+      <MapsAnchor href="https://maps.app.goo.gl/ifZ8LkvrgsfzBvbA7" target="_blank">
         <BoxLink>View in Google Maps</BoxLink>
       </MapsAnchor>
     </LeftDivFix>
